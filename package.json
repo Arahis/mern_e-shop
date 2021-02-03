@@ -8,13 +8,17 @@
     "start": "node server/server",
     "server": "nodemon server/server",
     "client": "yarn --cwd ./client run start",
-    "dev": "concurrently -k \"yarn run server\" \"yarn run client\""
+    "dev": "concurrently -k \"yarn run server\" \"yarn run client\"",
+    "data:import": "node server/seeder",
+    "data:destroy": "node server/seeder -d"
   },
   "author": "cheeezz.com",
   "license": "MIT",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
     "mongoose": "^5.11.13"
   },
   "devDependencies": {
